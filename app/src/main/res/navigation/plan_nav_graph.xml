@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/mainPlanFragment"
+    android:id="@+id/plan_nav_graph">
+    <fragment android:id="@+id/mainPlanFragment"
+        android:name="com.fasting.tracker.ui.MainPlanFragment"
+        tools:layout="@layout/fragment_main_plan"
+        />
+    <fragment android:id="@+id/planSevenDaysFragment"
+        android:name="com.fasting.tracker.ui.SevenDaysFragment"
+        tools:layout="@layout/fragment_seven_days"
+        />
+    <fragment android:id="@+id/twentyEightDaysFragment"
+        android:name="com.fasting.tracker.ui.TwentyEightDaysFragment"
+        tools:layout="@layout/fragment_twenty_eight_days"/>
+</navigation>

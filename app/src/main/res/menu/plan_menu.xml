@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/mainPlanFragment"
+    android:title="@string/hours24"/>
+<item android:id="@+id/planSevenDaysFragment"
+    android:title="@string/days7"/>
+<item android:id="@+id/twentyEightDaysFragment"
+    android:title="@string/days28"/>
+
+</menu>

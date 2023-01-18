@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import com.fasting.tracker.data.models.PlansModel
+import com.fasting.tracker.databinding.ItemOwnPlanBinding
 import com.fasting.tracker.databinding.ItemPlanBinding
 
 class PlanAdapter  : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -25,9 +26,19 @@ class PlanAdapter  : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         parent: ViewGroup,
         viewType: Int
     ): RecyclerView.ViewHolder {
-        val binding = ItemPlanBinding.inflate(LayoutInflater.from(parent.context),parent,false)
-        return MainViewHolder(binding)
+        if (viewType == 1) {
+            val binding =
+                ItemPlanBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            return MainViewHolder(binding)
+        }
+       else {
+            val binding =
+                ItemOwnPlanBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            return OwnPlanViewHolder(binding)
+        }
+
     }
+
     inner class MainViewHolder(private val binding: ItemPlanBinding) : RecyclerView.ViewHolder(binding.root) {
         val adapter=SubPlanAdapter()
         fun bind(sizesModel: PlansModel) {
@@ -40,10 +51,22 @@ class PlanAdapter  : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             adapter.differ.submitList(sizesModel.subPlanModel)
         }
     }
+    inner class OwnPlanViewHolder(private val binding: ItemOwnPlanBinding) : RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(sizesModel: PlansModel) {
+            binding.tvForBeginners.text = sizesModel.title
+            binding.tvSubtitle.text = sizesModel.subtitle
+            binding.cvPlan.background = sizesModel.color
+            binding.ivPlan.setImageResource(sizesModel.icon)
+        }
+    }
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         if(holder is MainViewHolder){
             val foodItem = differ.currentList[position]
             holder.bind(foodItem)
+        }
+        if (holder is OwnPlanViewHolder){
+            holder.bind(differ.currentList[position])
         }
 
     }
@@ -53,7 +76,12 @@ class PlanAdapter  : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     override fun getItemViewType(position: Int): Int {
-        return position
+        if (position==3){
+            return 2
+        }
+        else{
+            return 1
+        }
     }
 
     override fun getItemCount(): Int {
