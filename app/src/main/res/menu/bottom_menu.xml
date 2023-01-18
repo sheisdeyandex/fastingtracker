@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/fastingPlanFragment"
+    android:title="@string/my_plan"
+    android:icon="@drawable/my_plan_icon"/>
+<item android:id="@+id/myProgressFragment"
+    android:title="@string/my_progress"
+    android:icon="@drawable/my_progress"/>
+<item android:id="@+id/articlesFragment"
+    android:title="@string/articles"
+    android:icon="@drawable/articles_icon"/>
+    <item android:id="@+id/SettingsFragment"
+        android:title="@string/SettingsFragment"
+        android:icon="@drawable/settings_icon"/>
+
+</menu>

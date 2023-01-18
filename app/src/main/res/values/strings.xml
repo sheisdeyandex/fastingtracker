@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Fasting tracker</string>
+    <string name="my_plan">Мой план</string>
+    <string name="my_progress">Мой достижения</string>
+    <string name="articles">Статьи</string>
+    <string name="SettingsFragment">"Настройки "</string>
+    <string name="choosefastingplan">Выберите план голодания</string>
+    <string name="hours24">24 Часа</string>
+    <string name="days7">7 Дней</string>
+    <string name="days28">28 Дней</string>
+    <string name="for_beginners">Для новичков</string>
+    <string name="for_beginners_subtitle">Лёгкий старт для начинающих</string>
+    <string name="forexperienced">Для опытных</string>
+    <string name="choseofall">Выбор большинтсва</string>
+    <string name="forexperts">Для продвинутых</string>
+    <string name="forexpertssubtitle">Кто уверен в своих силах</string>
+    <string name="title">Свой план</string>
+    <string name="subtitle">Создавай свои планы голодания</string>
+</resources>

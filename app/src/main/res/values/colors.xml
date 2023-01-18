@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="selected_green_icon">#1EE988</color>
+    <color name="not_selected_item">#B2CBBF</color>
+    <color name="background">#F5F5F5</color>
+    <color name="text">#1A4C4C</color>
+    <color name="unselected_plan">#E6F5F0</color>
+    <color name="subtitle">#1A4C4C</color>
+    <color name="forBeginnersStart">#BBFFB5</color>
+    <color name="forBeginnersEnd">#B3FDAC</color>
+    <color name="forExperiencedStart">#C2C4FF</color>
+    <color name="forExperiencedEnd">#A7ABFF</color>
+    <color name="forExpertStart">#FFE3C2</color>
+    <color name="forExpertEnd">#FFCDA0</color>
+    <color name="ownPlanStart">#B7DACB</color>
+</resources>

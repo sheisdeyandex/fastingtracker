@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.FastingPlanFragment">
+<androidx.constraintlayout.widget.Guideline
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.05"
+    android:id="@+id/glTitle"
+
+
+
+
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choosefastingplan"
+        android:textColor="@color/text"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/glTitle"
+
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12"
+        android:id="@+id/glSelectPlan" />
+    <RadioGroup
+        android:id="@+id/rgMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintTop_toBottomOf="@id/glSelectPlan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:background="@drawable/unselectedplan"
+        android:padding="5dp"
+        android:checkedButton="@id/rb24hours"
+
+
+
+        >
+        <RadioButton
+            android:id="@+id/rb24hours"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/yourbuttonbackground"
+            android:button="@android:color/transparent"
+            android:text="@string/hours24"
+            android:textAlignment="center"
+            android:textColor="@color/yourbackgroundtext"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:id="@+id/rb7days"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/yourbuttonbackground"
+            android:button="@android:color/transparent"
+            android:text="@string/days7"
+            android:textAlignment="center"
+            android:textColor="@color/yourbackgroundtext"/>
+        <RadioButton
+            android:id="@+id/rb28days"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/yourbuttonbackground"
+            android:button="@android:color/transparent"
+            android:text="@string/days28"
+            android:textAlignment="center"
+            android:textColor="@color/yourbackgroundtext"/>
+
+
+    </RadioGroup>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPlan"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgMain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

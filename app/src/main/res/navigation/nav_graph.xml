@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fastingPlanFragment"
+    android:id="@+id/nav_graph">
+    <fragment android:id="@+id/fastingPlanFragment"
+        android:name="com.fasting.tracker.ui.FastingPlanFragment"
+        tools:layout="@layout/fragment_fasting_plan"/>
+    <fragment android:id="@+id/myProgressFragment"
+        android:name="com.fasting.tracker.ui.MyProgressFragment"
+        tools:layout="@layout/fragment_my_progress"/>
+    <fragment android:id="@+id/articlesFragment"
+        android:name="com.fasting.tracker.ui.ArticlesFragment"
+        tools:layout="@layout/fragment_articles"/>
+    <fragment android:id="@+id/SettingsFragment"
+        android:name="com.fasting.tracker.ui.SettingsFragment"
+        tools:layout="@layout/fragment_settings"/>
+
+
+</navigation>
